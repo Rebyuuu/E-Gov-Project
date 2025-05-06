@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIM Ownership Transfer - NTC</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="images/logontc.png" alt="NTC Logo" class="logo">
+      <h1>SIM Ownership Transfer Form</h1>
+      <p>नेपाल दूरसञ्चार कम्पनी लिमिटेड</p>
+    </header>
+    
+    <form id="sim-transfer-form" action="submitform.php" method="POST" enctype="multipart/form-data">
+      <!-- SIM Details -->
+      <fieldset>
+        <legend><span>1.</span> SIM Details</legend>
+        <div class="form-group">
+          <label for="sim-number">SIM Number:</label>
+          <input type="text" id="sim-number" name="simNumber" required>
+        </div>
+      </fieldset>
+      
+      <div class="owner-details-container">
+        <!-- Current Owner Details -->
+        <fieldset class="owner-details">
+          <legend><span>2.</span> Current Owner Details</legend>
+          
+          <div class="section-group">
+            <h3>Personal Information</h3>
+            <div class="form-group">
+              <label for="current-name">Full Name (अंग्रेजीमा):</label>
+              <input type="text" id="current-name" name="currentName" required>
+            </div>
+            <div class="form-group">
+              <label for="current-name-nepali">नाम (देवनागरीमा):</label>
+              <input type="text" id="current-name-nepali" name="currentNameNepali" required>
+            </div>
+            <div class="form-group">
+              <label for="current-father">Father's Name:</label>
+              <input type="text" id="current-father" name="currentFather" required>
+            </div>
+            <div class="form-group">
+              <label for="current-mother">Mother's Name:</label>
+              <input type="text" id="current-mother" name="currentMother" required>
+            </div>
+          </div>
+          
+          <div class="section-group">
+            <h3>Citizenship Details</h3>
+            <div class="form-group">
+              <label for="current-citizenship-no">Citizenship Number:</label>
+              <input type="text" id="current-citizenship-no" name="currentCitizenshipNo" required>
+            </div>
+            <div class="form-group">
+              <label for="current-citizenship-district">Issued District:</label>
+              <select id="current-citizenship-district" name="currentCitizenshipDistrict" required>
+                <option value="">Select District</option>
+                <option value="achham">Achham</option>
+                <option value="arghakhanchi">Arghakhanchi</option>
+                <option value="baglung">Baglung</option>
+                <option value="bajhang">Bajhang</option>
+                <option value="bajura">Bajura</option>
+                <option value="banke">Banke</option>
+                <option value="bara">Bara</option>
+                <option value="barpakh">Barpakh</option>
+                <option value="bhojpur">Bhojpur</option>
+                <option value="chitwan">Chitwan</option>
+                <option value="dadeldhura">Dadeldhura</option>
+                <option value="dailekh">Dailekh</option>
+                <option value="dang">Dang</option>
+                <option value="dhanusa">Dhanusa</option>
+                <option value="dhankuta">Dhankuta</option>
+                <option value="dholaka">Dholaka</option>
+                <option value="gulmi">Gulmi</option>
+                <option value="humla">Humla</option>
+                <option value="ilam">Ilam</option>
+                <option value="jajarkot">Jajarkot</option>
+                <option value="jhapa">Jhapa</option>
+                <option value="jhalari">Jhalari</option>
+                <option value="kailali">Kailali</option>
+                <option value="kaski">Kaski</option>
+                <option value="kathmandu">Kathmandu</option>
+                <option value="kavrepalanchok">Kavrepalanchok</option>
+                <option value="khotang">Khotang</option>
+                <option value="lalitpur">Lalitpur</option>
+                <option value="lamjung">Lamjung</option>
+                <option value="madhyapur">Madhyapur</option>
+                <option value="makwanpur">Makwanpur</option>
+                <option value="manang">Manang</option>
+                <option value="mechi">Mechi</option>
+                <option value="morang">Morang</option>
+                <option value="myagdi">Myagdi</option>
+                <option value="nawalparasi">Nawalparasi</option>
+                <option value="nepalgunj">Nepalgunj</option>
+                <option value="nuwakot">Nuwakot</option>
+                <option value="oddar">Oddar</option>
+                <option value="palpa">Palpa</option>
+                <option value="parbat">Parbat</option>
+                <option value="panchthar">Panchthar</option>
+                <option value="patan">Patan</option>
+                <option value="pyuthan">Pyuthan</option>
+                <option value="rapti">Rapti</option>
+                <option value="rukum">Rukum</option>
+                <option value="rupandehi">Rupandehi</option>
+                <option value="sarlahi">Sarlahi</option>
+                <option value="sindhuli">Sindhuli</option>
+                <option value="sindhupalchok">Sindhupalchok</option>
+                <option value="solukhumbu">Solukhumbu</option>
+                <option value="sunsari">Sunsari</option>
+                <option value="surkhet">Surkhet</option>
+                <option value="syangja">Syangja</option>
+                <option value="tanahu">Tanahu</option>
+                <option value="taplejung">Taplejung</option>
+                <option value="terhathum">Terhathum</option>
+                <option value="udayapur">Udayapur</option>
+                <option value="okhaldhunga">Okhaldhunga</option>
+                <option value="bhojpur">Bhojpur</option>
+                <option value="tanahu">Tanahu</option>
+                <option value="bhojpur">Bhojpur</option>
+                <option value="sankhuwasabha">Sankhuwasabha</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="current-citizenship-date">Issued Date:</label>
+              <input type="date" id="current-citizenship-date" name="currentCitizenshipDate" required>
+            </div>
+          </div>
+          
+          <div class="section-group">
+            <h3>Contact Details</h3>
+            <div class="form-group">
+              <label for="current-phone">Mobile Number:</label>
+              <input type="tel" id="current-phone" name="currentPhone" required>
+            </div>
+            <div class="form-group">
+              <label for="current-email">Email:</label>
+              <input type="email" id="current-email" name="currentEmail" required>
+            </div>
+          </div>
+          
+          <div class="section-group">
+            <h3>Address Details</h3>
+            <div class="form-group">
+              <label for="current-province">Province:</label>
+              <select id="current-province" name="currentProvince" required onchange="updateDistricts()">
+                <option value="">Select Province</option>
+                <option value="1">Koshi</option>
+                <option value="2">Madesh</option>
+                <option value="3">Bagmati</option>
+                <option value="4">Gandaki</option>
+                <option value="5">Lumbini</option>
+                <option value="6">Karnali</option>
+                <option value="7">Sudurpashchim</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="current-district">District:</label>
+              <select id="current-district" name="currentDistrict" required>
+                <option value="">Select District</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="current-municipality">Municipality:</label>
+              <input type="text" id="current-municipality" name="currentMunicipality" required>
+            </div>
+            <div class="form-group">
+              <label for="current-ward">Ward Number:</label>
+              <input type="number" id="current-ward" name="currentWard" min="1" max="35" required>
+            </div>
+          </div>
+          
+          <div class="section-group">
+            <h3>Document Upload</h3>
+            <div class="form-group">
+              <label for="current-citizenship-front">Citizenship Front Copy:</label>
+              <input type="file" id="current-citizenship-front" name="currentCitizenshipFront" accept=".pdf,.jpg,.png" required>
+            </div>
+            <div class="form-group">
+              <label for="current-citizenship-back">Citizenship Back Copy:</label>
+              <input type="file" id="current-citizenship-back" name="currentCitizenshipBack" accept=".pdf,.jpg,.png" required>
+            </div>
+            <div class="form-group">
+              <label for="current-photo">Passport Size Photo:</label>
+              <input type="file" id="current-photo" name="currentPhoto" accept=".jpg,.png" required>
+            </div>
+          </div>
+        </fieldset>
+        
+        <!-- New Owner Details -->
+        <fieldset class="owner-details">
+          <legend><span>3.</span> New Owner Details</legend>
+          
+          <div class="section-group">
+            <h3>Personal Information</h3>
+            <div class="form-group">
+              <label for="new-name">Full Name (अंग्रेजीमा):</label>
+              <input type="text" id="new-name" name="newName" required>
+            </div>
+            <div class="form-group">
+              <label for="new-name-nepali">नाम (देवनागरीमा):</label>
+              <input type="text" id="new-name-nepali" name="newNameNepali" required>
+            </div>
+            <div class="form-group">
+              <label for="new-father">Father's Name:</label>
+              <input type="text" id="new-father" name="newFather" required>
+            </div>
+            <div class="form-group">
+              <label for="new-mother">Mother's Name:</label>
+              <input type="text" id="new-mother" name="newMother" required>
+            </div>
+          </div>
+          
+          <div class="section-group">
+            <h3>Citizenship Details</h3>
+            <div class="form-group">
+              <label for="new-citizenship-no">Citizenship Number:</label>
+              <input type="text" id="new-citizenship-no" name="newCitizenshipNo" required>
+            </div>
+            <div class="form-group">
+              <label for="new-citizenship-district">Issued District:</label>
+              <select id="new-citizenship-district" name="newCitizenshipDistrict" required>
+                <option value="">Select District</option>
+                <option value="achham">Achham</option>
+                <option value="arghakhanchi">Arghakhanchi</option>
+                <option value="baglung">Baglung</option>
+                <option value="bajhang">Bajhang</option>
+                <option value="bajura">Bajura</option>
+                <option value="banke">Banke</option>
+                <option value="bara">Bara</option>
+                <option value="barpakh">Barpakh</option>
+                <option value="bhojpur">Bhojpur</option>
+                <option value="chitwan">Chitwan</option>
+                <option value="dadeldhura">Dadeldhura</option>
+                <option value="dailekh">Dailekh</option>
+                <option value="dang">Dang</option>
+                <option value="dhanusa">Dhanusa</option>
+                <option value="dhankuta">Dhankuta</option>
+                <option value="dholaka">Dholaka</option>
+                <option value="gulmi">Gulmi</option>
+                <option value="humla">Humla</option>
+                <option value="ilam">Ilam</option>
+                <option value="jajarkot">Jajarkot</option>
+                <option value="jhapa">Jhapa</option>
+                <option value="jhalari">Jhalari</option>
+                <option value="kailali">Kailali</option>
+                <option value="kaski">Kaski</option>
+                <option value="kathmandu">Kathmandu</option>
+                <option value="kavrepalanchok">Kavrepalanchok</option>
+                <option value="khotang">Khotang</option>
+                <option value="lalitpur">Lalitpur</option>
+                <option value="lamjung">Lamjung</option>
+                <option value="madhyapur">Madhyapur</option>
+                <option value="makwanpur">Makwanpur</option>
+                <option value="manang">Manang</option>
+                <option value="mechi">Mechi</option>
+                <option value="morang">Morang</option>
+                <option value="myagdi">Myagdi</option>
+                <option value="nawalparasi">Nawalparasi</option>
+                <option value="nepalgunj">Nepalgunj</option>
+                <option value="nuwakot">Nuwakot</option>
+                <option value="oddar">Oddar</option>
+                <option value="palpa">Palpa</option>
+                <option value="parbat">Parbat</option>
+                <option value="panchthar">Panchthar</option>
+                <option value="patan">Patan</option>
+                <option value="pyuthan">Pyuthan</option>
+                <option value="rapti">Rapti</option>
+                <option value="rukum">Rukum</option>
+                <option value="rupandehi">Rupandehi</option>
+                <option value="sarlahi">Sarlahi</option>
+                <option value="sindhuli">Sindhuli</option>
+                <option value="sindhupalchok">Sindhupalchok</option>
+                <option value="solukhumbu">Solukhumbu</option>
+                <option value="sunsari">Sunsari</option>
+                <option value="surkhet">Surkhet</option>
+                <option value="syangja">Syangja</option>
+                <option value="tanahu">Tanahu</option>
+                <option value="taplejung">Taplejung</option>
+                <option value="terhathum">Terhathum</option>
+                <option value="udayapur">Udayapur</option>
+                <option value="okhaldhunga">Okhaldhunga</option>
+                <option value="bhojpur">Bhojpur</option>
+                <option value="tanahu">Tanahu</option>
+                <option value="bhojpur">Bhojpur</option>
+                <option value="sankhuwasabha">Sankhuwasabha</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="new-citizenship-date">Issued Date:</label>
+              <input type="date" id="new-citizenship-date" name="newCitizenshipDate" required>
+            </div>
+          </div>
+          
+          <div class="section-group">
+            <h3>Contact Details</h3>
+            <div class="form-group">
+              <label for="new-phone">Mobile Number:</label>
+              <input type="tel" id="new-phone" name="newPhone" required>
+            </div>
+            <div class="form-group">
+              <label for="new-email">Email:</label>
+              <input type="email" id="new-email" name="newEmail" required>
+            </div>
+          </div>
+          
+          <div class="section-group">
+            <h3>Address Details</h3>
+            <div class="form-group">
+              <label for="new-province">Province:</label>
+              <select id="new-province" name="newProvince" required onchange="updatenewDistricts()">
+                <option value="">Select Province</option>
+                <option value="1">Koshi</option>
+                <option value="2">Madesh</option>
+                <option value="3">Bagmati</option>
+                <option value="4">Gandaki</option>
+                <option value="5">Lumbini</option>
+                <option value="6">Karnali</option>
+                <option value="7">Sudurpashchim</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="new-district">District:</label>
+              <select id="new-district" name="newDistrict" required>
+                <option value="">Select District</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="new-municipality">Municipality:</label>
+              <input type="text" id="new-municipality" name="newMunicipality" required>
+            </div>
+            <div class="form-group">
+              <label for="new-ward">Ward Number:</label>
+              <input type="number" id="new-ward" name="newWard" min="1" max="35" required>
+            </div>
+          </div>
+          
+          <div class="section-group">
+            <h3>Document Upload</h3>
+            <div class="form-group">
+              <label for="new-citizenship-front">Citizenship Front Copy:</label>
+              <input type="file" id="new-citizenship-front" name="newCitizenshipFront" accept=".pdf,.jpg,.png" required>
+            </div>
+            <div class="form-group">
+              <label for="new-citizenship-back">Citizenship Back Copy:</label>
+              <input type="file" id="new-citizenship-back" name="newCitizenshipBack" accept=".pdf,.jpg,.png" required>
+            </div>
+            <div class="form-group">
+              <label for="new-photo">Passport Size Photo:</label>
+              <input type="file" id="new-photo" name="newPhoto" accept=".jpg,.png" required>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      
+      <div class="form-group terms">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I hereby declare that all information provided above is true and correct.</label>
+      </div>
+      <a href="success.html" style="text-decoration: none; color:white ;" >
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+      function updateDistricts() {
+        const province = document.getElementById("current-province").value;
+        const districtSelect = document.getElementById("current-district");
+        const districts = {
+          '1': ['Bhojpur', 'Dhankuta', 'Ilam', 'Jhapa', 'Khotang', 'Morang', 'Okhaldhunga', 
+          'Panchthar', 'Sankhuwasabha', 'Solukhumbu', 'Sunsari', 'Taplejung', 'Terhathum', 'Udayapur'],
+          '2': ['Parsa', 'Bara', 'Rautahat', 'Sarlahi', 'Dhanusha', 'Mahottari', 'Siraha', 'Saptari'],
+          '3': ['Kathmandu', 'Lalitpur', 'Bhaktapur', 'Dhading', 'Nuwakot', 'Rasuwa', 'Sindhupalchok',
+          'Kavrepalanchok', 'Makwanpur', 'Chitwan'],
+          '4': ['Baglung', 'Gorkha', 'Kaski', 'Lamjung', 'Manang', 'Mustang', 'Myagdi',
+          'Nawalpur', 'Parbat', 'Syangja', 'Tanahun'],
+          '5': ['Arghakhanchi', 'Banke', 'Bardiya', 'Dang', 'Gulmi', 'Kapilvastu', 'Palpa', 
+          'Nawalparasi (West)', 'Pyuthan', 'Rolpa', 'Rupandehi'],
+          '6': ['Dolpa', 'Humla', 'Jumla', 'Kalikot', 'Mugu', 'Salyan', 'Surkhet',
+          'Dailekh', 'Jajarkot'],
+          '7': ['Achham', 'Baitadi', 'Bajhang', 'Bajura', 'Dadeldhura', 'Darchula', 'Kailali',
+          'Kanchanpur', 'Doti']
+        };
+        
+        districtSelect.innerHTML = '<option value="">Select District</option>'; // select district resetting
+        if (districts[province]) {
+          const sortedDistricts = districts[province].sort(); // alphabetical sorting
+          sortedDistricts.forEach(district => {
+            const option = document.createElement("option");
+            option.value = district.toLowerCase().replace(/\s+/g, '');
+            option.textContent = district;
+            districtSelect.appendChild(option);
+          });
+        }
+      }
+      function updatenewDistricts(){
+        const newprovince = document.getElementById("new-province").value;
+        const newdistrictSelect = document.getElementById("new-district");
+        const newdistricts = {
+         '1': ['Bhojpur', 'Dhankuta', 'Ilam', 'Jhapa', 'Khotang', 'Morang', 'Okhaldhunga', 
+          'Panchthar', 'Sankhuwasabha', 'Solukhumbu', 'Sunsari', 'Taplejung', 'Terhathum', 'Udayapur'],
+          '2': ['Parsa', 'Bara', 'Rautahat', 'Sarlahi', 'Dhanusha', 'Mahottari', 'Siraha', 'Saptari'],
+          '3': ['Kathmandu', 'Lalitpur', 'Bhaktapur', 'Dhading', 'Nuwakot', 'Rasuwa', 'Sindhupalchok',
+          'Kavrepalanchok', 'Makwanpur', 'Chitwan'],
+          '4': ['Baglung', 'Gorkha', 'Kaski', 'Lamjung', 'Manang', 'Mustang', 'Myagdi',
+          'Nawalpur', 'Parbat', 'Syangja', 'Tanahun'],
+          '5': ['Arghakhanchi', 'Banke', 'Bardiya', 'Dang', 'Gulmi', 'Kapilvastu', 'Palpa', 
+          'Nawalparasi (West)', 'Pyuthan', 'Rolpa', 'Rupandehi'],
+          '6': ['Dolpa', 'Humla', 'Jumla', 'Kalikot', 'Mugu', 'Salyan', 'Surkhet',
+          'Dailekh', 'Jajarkot'],
+          '7': ['Achham', 'Baitadi', 'Bajhang', 'Bajura', 'Dadeldhura', 'Darchula', 'Kailali',
+          'Kanchanpur', 'Doti']
+        };
+        newdistrictSelect.innerHTML = '<option value="">Select District</option>'; // Reset the district select
+        if (newdistricts[newprovince]) {
+          const sortedDistrictsn = newdistricts[newprovince].sort(); //alphabetical sorting
+          sortedDistrictsn.forEach(district => {
+            const option = document.createElement("option");
+            option.value = district.toLowerCase().replace(/\s+/g, '');
+            option.textContent = district;
+            newdistrictSelect.appendChild(option);
+          });
+        }
+      }
+    </script>
+  </body>
+  </html>

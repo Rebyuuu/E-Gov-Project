@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #1a4672;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo and text */
+}
+
+/* Logo Image */
+.logo {
+    height: 30px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Logo Text */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+}
+
+/* Main Text (Nepal Telecom) */
+.main-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Sub Text (नेपाल दूरसञ्चार कम्पनी लिमिटेड) */
+.sub-text {
+    font-size: 0.9rem;
+    color: #ccc; /* Light gray color for subtext */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+/* Banner with Slider */
+.banner {
+    position: relative;
+    overflow: hidden;
+    height: 400px; /* Adjust height as needed */
+    width: 100%; /* Ensure banner takes full width */
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slides {
+    display: flex;
+    width: 400%; /* 4 images = 400% width */
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 25%; /* Ensure images take full width of the banner */
+    height: 100%; /* Ensure images take full height of the banner */
+    object-fit: cover; /* Maintain aspect ratio and cover the banner */
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10; /* Ensure buttons are above the images */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Services */
+.services {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 1rem;
+}
+
+.service-items {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+}
+.service-item:hover
+{
+        animation: bounce 0.5s ease-in-out;
+
+}
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.service-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.service-item h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #1a4672;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: rgb(117, 117, 248);
+    text-decoration: underline;
+  }

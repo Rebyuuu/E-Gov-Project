@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTC Admin Login</title>
+    <link rel="stylesheet" href="adminlogin.css">
+</head>
+<body>
+    <div class="header">
+        <img src="images/ntcc.jpg" alt="NTC Logo" class="logo">
+        <h1>Nepal Telecom </h1>
+    </div>
+    <h2 style="justify-self: center;">Nepal Telecom Admin Portal</h2>
+    <div class="container">
+        <div class="ntc-photo">
+            <img src="images/logontc.png" alt="NTC Building">
+        </div>
+        <div class="login-container">
+            <h2>Admin Login</h2>
+            <form id="loginForm">
+                <label for="adminId">Admin ID:</label>
+                <input type="text" id="adminId" name="adminId" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <div id="error-message" class="error-message"></div>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="adminlogin.js"></script>
+</body>
+</html>

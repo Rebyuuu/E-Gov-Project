@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="-UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Details - NTC</title>
+  <link rel="stylesheet" href="appdetails.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <img src="images/logontc.png" alt="NTC Logo" class="logo">
+      <h1>SIM Ownership Transfer Form</h1>
+      <p>नेपाल दूरसञ्चार कम्पनी लिमिटेड</p>
+    </header>
+
+    <!-- SIM Number & Photo -->
+    <div class="sim-photo-section">
+      <div class="sim-number">
+
+          <h2>SIM Number: <span id="sim-number"></span></h2>
+      </div>
+      <div class="passport-photo">
+        <img id="new-photo-img" src="" alt="New Owner's Photo" class="photo-preview">
+      </div>
+    </div>
+
+       <!-- New Owner Details -->
+       <fieldset class="owner-details">
+        <legend><span>1.</span> New Owner Details</legend>
+        <div class="owner-details-grid">
+          <!-- New Owner's Personal Details -->
+          <div class="form-group">
+            <label for="new-name">Full Name:</label>
+            <input type="text" id="new-name" name="newName" readonly>
+          </div>
+          <div class="form-group">
+            <label for="new-name-nepali">Full Name (Nepali):</label>
+            <input type="text" id="new-name-nepali" name="newNameNepali" readonly>
+          </div>
+          <div class="form-group">
+            <label for="new-father">Father's Name:</label>
+            <input type="text" id="new-father" name="newFather" readonly>
+          </div>
+          <div class="form-group">
+            <label for="new-mother">Mother's Name:</label>
+            <input type="text" id="new-mother" name="newMother" readonly>
+          </div>
+          <div class="form-group">
+            <label for="new-citizenship-no">Citizenship Number:</label>
+            <input type="text" id="new-citizenship-no" name="newCitizenshipNo" readonly>
+          </div>
+          <div class="form-group">
+            <label for="new-citizenship-district">Citizenship District:</label>
+            <input type="text" id="new-citizenship-district" name="newCitizenshipDistrict" readonly>
+          </div>
+          <div class="form-group">
+            <label for="new-citizenship-date">Citizenship Issue Date:</label>
+            <input type="text" id="new-citizenship-date" name="newCitizenshipDate" readonly>
+          </div>
+          <div class="form-group">
+            <label for="new-phone">Phone Number:</label>
+            <input type="text" id="new-phone" name="newPhone" readonly>
+          </div>
+          <div class="form-group">
+            <label for="new-email">Email:</label>
+            <input type="text" id="new-email" name="newEmail" readonly>
+          </div>
+          <div class="form-group">
+            <label for="new-province">Province:</label>
+            <input type="text" id="new-province" name="newProvince" readonly>
+          </div>
+          <div class="form-group">
+            <label for="new-district">District:</label>
+            <input type="text" id="new-district" name="newDistrict" readonly>
+          </div>
+          <div class="form-group">
+            <label for="new-municipality">Municipality:</label>
+            <input type="text" id="new-municipality" name="newMunicipality" readonly>
+          </div>
+          <div class="form-group">
+            <label for="new-ward">Ward Number:</label>
+            <input type="text" id="new-ward" name="newWard" readonly>
+          </div>
+        </div>
+  
+        <!-- New Owner's Citizenship Photos -->
+        <div class="citizenship-photos">
+          <div class="form-group">
+            <label>Citizenship Front Photo:</label>
+            <a id="new-citizenship-front-link" href="" target="_blank">
+              <img id="new-citizenship-front-img" src="" alt="Citizenship Front Photo" class="photo-preview">
+            </a>
+          </div>
+          <div class="form-group">
+            <label>Citizenship Back Photo:</label>
+            <a id="new-citizenship-back-link" href="" target="_blank">
+              <img id="new-citizenship-back-img" src="" alt="Citizenship Back Photo" class="photo-preview">
+            </a>
+          </div>
+        </div>
+      </fieldset>
+  
+      <!-- Current Owner Details -->
+      <fieldset class="owner-details">
+        <legend><span>2.</span> Current Owner Details</legend>
+        <div class="owner-details-grid">
+          <!-- Current Owner's Personal Details -->
+          <div class="form-group">
+            <label for="current-name">Full Name:</label>
+            <input type="text" id="current-name" name="currentName" readonly>
+          </div>
+          <div class="form-group">
+            <label for="current-name-nepali">Full Name (Nepali):</label>
+            <input type="text" id="current-name-nepali" name="currentNameNepali" readonly>
+          </div>
+          <div class="form-group">
+            <label for="current-father">Father's Name:</label>
+            <input type="text" id="current-father" name="currentFather" readonly>
+          </div>
+          <div class="form-group">
+            <label for="current-mother">Mother's Name:</label>
+            <input type="text" id="current-mother" name="currentMother" readonly>
+          </div>
+          <div class="form-group">
+            <label for="current-citizenship-no">Citizenship Number:</label>
+            <input type="text" id="current-citizenship-no" name="currentCitizenshipNo" readonly>
+          </div>
+          <div class="form-group">
+            <label for="current-citizenship-district">Citizenship District:</label>
+            <input type="text" id="current-citizenship-district" name="currentCitizenshipDistrict" readonly>
+          </div>
+          <div class="form-group">
+            <label for="current-citizenship-date">Citizenship Issue Date:</label>
+            <input type="text" id="current-citizenship-date" name="currentCitizenshipDate" readonly>
+          </div>
+          <div class="form-group">
+            <label for="current-phone">Phone Number:</label>
+            <input type="text" id="current-phone" name="currentPhone" readonly>
+          </div>
+          <div class="form-group">
+            <label for="current-email">Email:</label>
+            <input type="text" id="current-email" name="currentEmail" readonly>
+          </div>
+          <div class="form-group">
+            <label for="current-province">Province:</label>
+            <input type="text" id="current-province" name="currentProvince" readonly>
+          </div>
+          <div class="form-group">
+            <label for="current-district">District:</label>
+            <input type="text" id="current-district" name="currentDistrict" readonly>
+          </div>
+          <div class="form-group">
+            <label for="current-municipality">Municipality:</label>
+            <input type="text" id="current-municipality" name="currentMunicipality" readonly>
+          </div>
+          <div class="form-group">
+            <label for="current-ward">Ward Number:</label>
+            <input type="text" id="current-ward" name="currentWard" readonly>
+          </div>
+        </div>
+  
+        <!-- Current Owner's Citizenship Photos -->
+        <div class="citizenship-photos">
+          <div class="form-group">
+            <label>Citizenship Front Photo:</label>
+            <a id="current-citizenship-front-link" href="" target="_blank">
+              <img id="current-citizenship-front-img" src="" alt="Citizenship Front Photo" class="photo-preview">
+            </a>
+          </div>
+          <div class="form-group">
+            <label>Citizenship Back Photo:</label>
+            <a id="current-citizenship-back-link" href="" target="_blank">
+              <img id="current-citizenship-back-img" src="" alt="Citizenship Back Photo" class="photo-preview">
+            </a>
+          </div>
+        </div>
+      </fieldset>
+
+    <!-- Terms -->
+    <div class="form-group terms">
+      <input type="checkbox" id="terms" name="terms" disabled>
+      <label for="terms">I hereby declare that all information provided is true.</label>
+    </div>
+  </div>
+
+  <script src="appdetails.js"></script>
+</body>
+</html>

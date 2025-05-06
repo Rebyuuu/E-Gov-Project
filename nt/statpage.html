@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Application Status</title>
+  <link rel="stylesheet" href="statpg.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo-container">
+      <img src="images/ntcc.jpg" alt="NTC-logo" class="logo">
+      <div class="logo-text">
+        <div class="main-text">Nepal Telecom</div>
+        <div class="sub-text">नेपाल दूरसञ्चार कम्पनी लिमिटेड</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Section -->
+  <div class="main-content">
+    <div class="container">
+      <div class="second">
+        <h1>Check Application Status</h1>
+        <p>Enter your reference number to check the status of your SIM ownership transfer application.</p>
+      </div>
+
+      <!-- Form to enter reference number -->
+      <form id="status-check-form">
+        <div class="form-group">
+          <label for="refNumber">Reference Number:</label>
+          <input type="text" id="refNumber" name="refNumber" placeholder="Enter your reference number" required>
+        </div>
+        <button type="submit" class="submit-button">Check Status</button>
+      </form>
+
+      <!-- Section to display the status -->
+      <div id="status-result" class="status-result">
+        <!-- Status will be displayed here dynamically -->
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 Nepal Telecom. All rights reserved.</p>
+</footer>
+  <script src="statp.js"></script>
+</body>
+</html>
